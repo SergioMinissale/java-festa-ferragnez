@@ -15,7 +15,7 @@ public class CheckGuest {
 		boolean eccoti = false;
 	    
 		//visto che la condizione è falsa entro dentro al for
-		for(int i = 0; i < listaInvitati.length ; i++ ) {
+		/*for(int i = 0; i < listaInvitati.length ; i++ ) {
 			
 			if(persona.equals(listaInvitati[i])) {
 				eccoti = true;
@@ -23,12 +23,29 @@ public class CheckGuest {
 				break;
 			}
 			
-			
 			}
 			if(!eccoti) {
 				System.out.println("Mi dispiace " + persona + " ma non sei nella lista, non puoi entrare!");
+		}*/
+	
+		int i=0;
+		while(!eccoti && (i < listaInvitati.length)) {
+			if(persona.equals(listaInvitati[i])) {
+				
+				System.out.println("Prego " + persona + "puoi entrare alla festa, buon divertimento!");
+				eccoti = true;
+				
+			} else {
+				i++;
+				
+			}
+			
+			
+			
 		}
-		 
+		if(!eccoti) {
+			System.out.println("Mi dispiace " + persona + " ma non sei nella lista, non puoi entrare!");
+		}
 		
 		
 		scanner.close();

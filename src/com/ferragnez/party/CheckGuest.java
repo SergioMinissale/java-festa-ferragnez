@@ -32,17 +32,16 @@ public class CheckGuest {
 		while(!eccoti && (i < listaInvitati.length)) {
 			if(persona.equals(listaInvitati[i])) {
 				
-				System.out.println("Prego " + persona + "puoi entrare alla festa, buon divertimento!");
+				System.out.println("Prego " + persona + " puoi entrare alla festa, buon divertimento!");
 				eccoti = true;
 				
 			} else {
 				i++;
 				
 			}
-			
-			
-			
+
 		}
+		
 		if(!eccoti) {
 			System.out.println("Mi dispiace " + persona + " ma non sei nella lista, non puoi entrare!");
 		}
